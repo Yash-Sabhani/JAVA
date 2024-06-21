@@ -39,6 +39,38 @@ public class ListDemo {
 		list1.clear();
 		System.out.println("List is: "+list1);
 		
+		//generics //generation //Homogeneous List
+		List<String> names = new ArrayList<>();
+		names.add("Yash");
+		names.add("Vandan");
+		names.add("Ronak");
+		names.add("Kishan");
+		names.add("Rohan");
+		
+		System.out.println("List is: " +names);
+		
+		Collections.reverse(names);
+		System.out.println("List is: " +names);
+		
+		//Traverse a list
+		Iterator<String> i = names.iterator();
+		while(i.hasNext()) {
+			String nm = i.next();
+			System.out.println(nm);
+			
+			if(nm.equals("Yash")) {
+				i.remove();
+			}
+		}
+		
+		System.out.println("Name List is: " +names);
+		
+		//Traverse in reverse / Backward order
+		ListIterator<String> li = names.listIterator(names.size());
+		while(li.hasPrevious()) {
+			String nm = li.previous();
+			System.out.println(nm);
+		}
 	}
 
 }
