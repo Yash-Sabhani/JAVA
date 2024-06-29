@@ -20,7 +20,7 @@ public class JdbcDemo {
 		String url = "jdbc:mysql://localhost:3306/Emp_details";
 		String username = "root";
 		String password = "Yash@5625";
-		String query = "select ename from employee where eid = 2;";
+		String query = "select ename from employee where eid = 3;";
 		
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		Connection con = DriverManager.getConnection(url,username,password);
